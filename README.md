@@ -1,4 +1,8 @@
-# mp3-compress
+# Audio Compress Bun 
+
+This is a simple program that compresses an audio file using ffmpeg.
+
+## Usage
 
 To install dependencies:
 
@@ -9,7 +13,15 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run index.ts <input file> <level>
 ```
 
-This project was created using `bun init` in bun v1.1.24. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Level is an integer between 0 and 9, with 0 being the highest compression and 9 being the lowest.
+
+The recommended level is 2, which is the default.
+
+The output file will have the same name as the input file, but with "_compressed" appended to it's name.
+
+```
+
+
