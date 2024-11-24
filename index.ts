@@ -13,8 +13,8 @@ if (parsed < 0 || parsed > 9) {
 }
 
 
-const fileName = file.split(".")[0]
-const ext = file.split(".")[1]
-const outputFilePath = `${fileName}_compressed.${ext}`
+const fileName = file.slice(0, file.lastIndexOf("."));
+const ext = file.slice(file.lastIndexOf("."));
+const outputFilePath = `${fileName}_compressed${ext}`
 
 await $`ffmpeg -i "${file}" -codec:a libmp3lame -qscale:a ${level} "${outputFilePath}"`;
