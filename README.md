@@ -22,6 +22,5 @@ The recommended level is 2, which is the default.
 
 The output file will have the same name as the input file, but with "_compressed" appended to it's name.
 
-```
 
 
